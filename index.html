@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Домашняя работа №1 — главная</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie_light.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a class="header__logo" href="index.html">Домашняя работа №1</a>
+        <nav class="header__nav">
+          <a class="header__link" href="#team">Участники</a>
+          <a class="header__link" id="contacts-link" href="#contacts">Контакты</a>
+        </nav>
+        <button class="button button_outline header__theme" id="theme-button" type="button">Тёмная тема</button>
+      </div>
+    </header>
+
+    <main class="main container">
+      <section class="hero">
+        <div>
+          <h1 class="hero__title">Привет!</h1>
+          <p class="hero__text">
+            Нас четверо, и мы делаем этот сайт в рамках курса по веб-разработке. Здесь мы
+            рассказываем о себе и о том, что любим.
+          </p>
+        </div>
+        <div class="hero__animation" id="hero-animation"></div>
+      </section>
+
+      <section class="section" id="team">
+        <h2 class="section__title">Участники</h2>
+        <div class="team">
+          <article class="member">
+            <p class="member__number">01</p>
+            <h3 class="member__name">Имя Фамилия</h3>
+            <a class="member__link" href="members/member-1.html">Страница участника →</a>
+          </article>
+          <article class="member">
+            <p class="member__number">02</p>
+            <h3 class="member__name">Имя Фамилия</h3>
+            <a class="member__link" href="members/member-2.html">Страница участника →</a>
+          </article>
+          <article class="member">
+            <p class="member__number">03</p>
+            <h3 class="member__name">Имя Фамилия</h3>
+            <a class="member__link" href="members/member-3.html">Страница участника →</a>
+          </article>
+          <article class="member">
+            <p class="member__number">04</p>
+            <h3 class="member__name">Имя Фамилия</h3>
+            <a class="member__link" href="members/member-4.html">Страница участника →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section_inverse">
+        <h2 class="section__title">Хотите с нами связаться?</h2>
+        <p class="section__text">Мы открыты для вопросов и предложений. Нажмите кнопку — покажем контакты.</p>
+        <button class="button" id="contacts-button" type="button">Показать контакты</button>
+      </section>
+
+      <section class="section" id="contacts" hidden>
+        <h2 class="section__title">Контакты</h2>
+        <div class="contacts">
+          <div class="contact">
+            <h3 class="contact__name">Имя Фамилия</h3>
+            <a class="contact__link" href="https://github.com/login1">github.com/login1</a>
+            <a class="contact__link" href="mailto:name1@example.com">name1@example.com</a>
+          </div>
+          <div class="contact">
+            <h3 class="contact__name">Имя Фамилия</h3>
+            <a class="contact__link" href="https://github.com/login2">github.com/login2</a>
+            <a class="contact__link" href="mailto:name2@example.com">name2@example.com</a>
+          </div>
+          <div class="contact">
+            <h3 class="contact__name">Имя Фамилия</h3>
+            <a class="contact__link" href="https://github.com/login3">github.com/login3</a>
+            <a class="contact__link" href="mailto:name3@example.com">name3@example.com</a>
+          </div>
+          <div class="contact">
+            <h3 class="contact__name">Имя Фамилия</h3>
+            <a class="contact__link" href="https://github.com/login4">github.com/login4</a>
+            <a class="contact__link" href="mailto:name4@example.com">name4@example.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner container">
+        <p class="footer__text">© 2026 Домашняя работа №1</p>
+        <a href="https://github.com/KirillKrainov22/WEB--1">Исходный код на GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>
