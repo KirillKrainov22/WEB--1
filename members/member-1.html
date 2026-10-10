@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Имя Фамилия — Домашняя работа №1</title>
+    <title>Кирилл Крайнов — Домашняя работа №1</title>
     <link rel="stylesheet" href="../styles.css" />
     <script src="../app.js" defer></script>
   </head>
@@ -21,15 +21,14 @@
 
     <main class="main container">
       <section class="profile">
-        <img class="profile__photo" src="../images/avatar.svg" alt="Фото: Имя Фамилия" />
+        <img class="profile__photo" src="../images/kirill/photo.jpg" alt="Фото: Кирилл Крайнов" />
         <div>
-          <h1 class="profile__name">Имя Фамилия</h1>
-          <p class="profile__text">
-            Пара предложений о себе: где учусь, чем занимаюсь, что делал(а) на этом сайте.
-          </p>
+          <h1 class="profile__name">Кирилл Крайнов</h1>
+          <p class="profile__text">Учусь в НИУ ВШЭ. Люблю программирование, спорт и музыку.</p>
           <button class="button" id="more-button" type="button">Подробнее</button>
           <p class="more" id="more-text" hidden>
-            Больше о себе: откуда я, почему пошёл(пошла) в IT, чего хочу научиться.
+            Работаю iOS-разработчиком в Яндекс Музыке. Фронтенд раньше не изучал - максимум писал
+            HTML и CSS в школе, поэтому интересно познакомиться с вебом поближе.
           </p>
         </div>
       </section>
@@ -37,10 +36,10 @@
       <section class="section">
         <h2 class="section__title">Мои увлечения</h2>
         <div class="tags">
-          <span class="tags__item">Кино</span>
-          <span class="tags__item">Музыка</span>
-          <span class="tags__item">Игры</span>
+          <span class="tags__item">Программирование</span>
           <span class="tags__item">Спорт</span>
+          <span class="tags__item">Музыка</span>
+          <span class="tags__item">Кино</span>
         </div>
       </section>
 
@@ -48,19 +47,25 @@
         <h2 class="section__title">Любимое</h2>
         <div class="favorites">
           <article class="favorite">
+            <img class="favorite__image" src="../images/kirill/film.jpg" alt="Кадр из фильма «Криминальное чтиво»" />
             <p class="favorite__label">Фильм</p>
-            <h3 class="favorite__title">Название фильма</h3>
-            <p class="favorite__text">Чем он нравится — пара предложений.</p>
+            <h3 class="favorite__title">Криминальное чтиво</h3>
+            <p class="favorite__text">Фильм Квентина Тарантино 1994 года.</p>
+          </article>
+          <article class="favorite">
+            <img class="favorite__image" src="../images/kirill/sport.jpg" alt="Футболист с кубком после финала" />
+            <p class="favorite__label">Спорт</p>
+            <h3 class="favorite__title">Футбол</h3>
+            <p class="favorite__text">
+              Занимался футболом почти всю школьную жизнь: стал серебряным призёром первенства России
+              и даже попал на просмотр в академию ЦСКА, но, к сожалению, не сложилось. Ещё люблю
+              смотреть большой теннис и хотел бы попробовать поиграть сам.
+            </p>
           </article>
           <article class="favorite">
             <p class="favorite__label">Музыка</p>
-            <h3 class="favorite__title">Исполнитель или альбом</h3>
-            <p class="favorite__text">Что слушаю чаще всего.</p>
-          </article>
-          <article class="favorite">
-            <p class="favorite__label">Игра</p>
-            <h3 class="favorite__title">Название игры</h3>
-            <p class="favorite__text">Сколько часов наиграно и почему.</p>
+            <h3 class="favorite__title">Любимые исполнители</h3>
+            <p class="favorite__text">Kanye West, Drake, Future, Nemzzz, A$AP Rocky.</p>
           </article>
         </div>
       </section>
@@ -68,8 +73,8 @@
       <section class="section">
         <h2 class="section__title">Где меня найти</h2>
         <div class="links">
-          <a class="links__item" href="https://github.com/">GitHub</a>
-          <a class="links__item" href="https://t.me/">Telegram</a>
+          <a class="links__item" href="https://github.com/KirillKrainov22">GitHub</a>
+          <a class="links__item" href="https://t.me/kiryshkapetrushk">Telegram</a>
         </div>
       </section>
     </main>
