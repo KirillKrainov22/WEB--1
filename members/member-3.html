@@ -1,84 +1,67 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Имя Фамилия — Домашняя работа №1</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <script src="../app.js" defer></script>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__inner container">
-        <a class="header__logo" href="../index.html">Домашняя работа №1</a>
-        <nav class="header__nav">
-          <a class="header__link" href="../index.html">← На главную</a>
-          <a class="header__link" href="../index.html#team">Все участники</a>
-        </nav>
-        <button class="button button_outline header__theme" id="theme-button" type="button">Тёмная тема</button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Тимур: ВШЭ, математика и онлайн-школа LGG. Спорт, музыка и немного обо мне." />
+  <title>Тимур — личная страница</title>
+  <link rel="stylesheet" href="timur.css" />
+  <script src="timur.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="topbar wrap">
+    <a class="back-link" href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>На главную</a>
+    <a class="wordmark" href="#main">timur<span> / </span>личная сторона</a>
+    <button class="small-button" id="palette-button" type="button" aria-pressed="false">Ночной режим</button>
+  </header>
+  <main id="main">
+    <section class="poster wrap" aria-labelledby="poster-title">
+      <div class="poster-copy">
+        <h1 id="poster-title">ТИМУР<span class="title-dot">.</span></h1>
+        <p class="intro">Математика, спорт, музыка и ИТ.<br />А между ними — свои проекты.</p>
+        <a class="paper-link" href="#about">Знакомимся ближе <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
       </div>
-    </header>
+      <figure class="portrait-frame">
+        <div class="portrait-window"><img src="../images/timur/portrait.jpg" width="1350" height="1800" alt="Тимур у пруда в солнечный день" fetchpriority="high" /></div>
+        <figcaption>Первомайск → новые истории</figcaption>
+      </figure>
+      <span class="age-sticker">20 лет<br /><small>на своей волне</small></span>
+      <span class="home-sticker">Первомайск<br /><small>Нижегородская область</small></span>
+      <svg class="poster-star" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 9 31 26-20-12 31 27 8-30 10 17 27-29-12-8 25-10-29-27 15 13-29L0 50l30-9-16-25 28 13Z"/></svg>
+      <p class="poster-bottom">ВШЭ / разработка игр / LGG <span>Листай дальше</span></p>
+    </section>
 
-    <main class="main container">
-      <section class="profile">
-        <img class="profile__photo" src="../images/avatar.svg" alt="Фото: Имя Фамилия" />
-        <div>
-          <h1 class="profile__name">Имя Фамилия</h1>
-          <p class="profile__text">
-            Пара предложений о себе: где учусь, чем занимаюсь, что делал(а) на этом сайте.
-          </p>
-          <button class="button" id="more-button" type="button">Подробнее</button>
-          <p class="more" id="more-text" hidden>
-            Больше о себе: откуда я, почему пошёл(пошла) в IT, чего хочу научиться.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section__title">Мои увлечения</h2>
-        <div class="tags">
-          <span class="tags__item">Кино</span>
-          <span class="tags__item">Музыка</span>
-          <span class="tags__item">Игры</span>
-          <span class="tags__item">Спорт</span>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section__title">Любимое</h2>
-        <div class="favorites">
-          <article class="favorite">
-            <p class="favorite__label">Фильм</p>
-            <h3 class="favorite__title">Название фильма</h3>
-            <p class="favorite__text">Чем он нравится — пара предложений.</p>
-          </article>
-          <article class="favorite">
-            <p class="favorite__label">Музыка</p>
-            <h3 class="favorite__title">Исполнитель или альбом</h3>
-            <p class="favorite__text">Что слушаю чаще всего.</p>
-          </article>
-          <article class="favorite">
-            <p class="favorite__label">Игра</p>
-            <h3 class="favorite__title">Название игры</h3>
-            <p class="favorite__text">Сколько часов наиграно и почему.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section__title">Где меня найти</h2>
-        <div class="links">
-          <a class="links__item" href="https://github.com/">GitHub</a>
-          <a class="links__item" href="https://t.me/">Telegram</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer__inner container">
-        <p class="footer__text">© 2026 Домашняя работа №1</p>
-        <a href="../index.html">На главную</a>
+    <section class="about wrap section-space" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><h2 id="about-title">Сейчас<br /><em>в моей жизни</em></h2><p>Учусь, объясняю сложное<br />и собираю своё.</p></div>
+      <div class="about-grid">
+        <div class="study-note"><p>Учусь в НИУ ВШЭ на программе «Профессиональная разработка игр и геймификация бизнес-процессов».</p><p>Мне интересно создавать то, с чем людям хочется взаимодействовать.</p></div>
+        <div class="work-note"><h3>Математика.<br />Команда. <span>LGG.</span></h3><p>Работаю репетитором по математике. Вместе с друзьями развиваю нашу онлайн-школу LGG.</p><p>Для команды разрабатываю платформу и экосистему: место, где учёба, люди и рабочие процессы складываются в одно целое.</p><button class="paper-button" id="lgg-button" type="button" aria-expanded="false" aria-controls="lgg-more">Подробнее о моей роли <span aria-hidden="true">+</span></button><p id="lgg-more" class="expanded-note" hidden>В LGG совмещаю преподавание и разработку. Помогаю ученикам разбираться в математике и создаю инструменты для нашей команды.</p></div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section class="sports section-space" aria-labelledby="sport-title"><div class="wrap sports-inner">
+      <div><h2 id="sport-title">Спорт со мной<br /><span>с детства.</span></h2><p class="sports-lead">Сначала бассейн. Потом ринг.<br />Сейчас — в удовольствие.</p></div>
+      <div class="sports-story"><div class="sport-years"><p><strong>4 года</strong><span>начал плавать</span></p><p><strong>7 лет</strong><span>пришёл в бокс</span></p><p><strong>до 17 лет</strong><span>бокс и плавание</span></p></div><p>Побеждал и занимал призовые места на всероссийских турнирах и турнирах СНГ по боксу. Спорт был большой частью моей жизни — и остаётся ею.</p><div class="sport-interests"><p>Сейчас хожу в тренажёрный зал, играю в настольный теннис и увлекаюсь русским бильярдом — просто в своё удовольствие. Ещё хочу научиться играть в большой теннис.</p></div></div>
+    </div></section>
+
+    <section class="favorites wrap section-space" aria-labelledby="favorites-title">
+      <div class="section-heading"><h2 id="favorites-title">На повторе.<br /><em>И в избранном.</em></h2><p>Музыка, кино и игры,<br />к которым возвращаюсь.</p></div>
+      <div class="filter-buttons" role="group" aria-label="Что показать в избранном"><button type="button" data-filter="all" aria-pressed="true">Всё вместе</button><button type="button" data-filter="music" aria-pressed="false">Музыка</button><button type="button" data-filter="cinema" aria-pressed="false">Кино</button><button type="button" data-filter="games" aria-pressed="false">Игры</button></div>
+      <div class="collection" id="collection">
+        <article class="cover cover-kanye" data-category="music"><img src="../images/timur/kanye.png" width="736" height="1308" alt="Канье Уэст с головой медведя в руках" /><div class="cover-caption"><span>Музыка</span><h3>Kanye West</h3></div></article>
+        <article class="cover cover-saluki" data-category="music"><img src="../images/timur/saluki.png" width="736" height="736" alt="Изображение Салуки: силуэт над полем и затмение" /><div class="cover-caption"><span>Музыка</span><h3>saluki</h3></div></article>
+        <article class="cover cover-film" data-category="cinema"><img src="../images/timur/devils-advocate.png" width="736" height="1104" alt="Постер фильма «Адвокат дьявола»" /><div class="cover-caption"><span>Кино</span><h3>Адвокат дьявола</h3></div></article>
+        <article class="cover cover-don" data-category="music"><img src="../images/timur/don-toliver.png" width="945" height="2048" alt="Don Toliver с флагом на фоне вечернего неба" /><div class="cover-caption"><span>Музыка</span><h3>Don Toliver</h3></div></article>
+        <article class="cover cover-prince" data-category="music"><img src="../images/timur/dark-prince.png" width="500" height="500" alt="Обложка Тёмного Принца: портрет с красной полосой" /><div class="cover-caption"><span>Музыка</span><h3>Тёмный Принц</h3></div></article>
+        <article class="cover cover-green" data-category="cinema"><img src="../images/timur/green-book.png" width="800" height="1267" alt="Постер фильма «Зелёная книга»" /><div class="cover-caption"><span>Кино</span><h3>Зелёная книга</h3></div></article>
+        <article class="cover cover-dune" data-category="cinema"><img src="../images/timur/dune-two.png" width="736" height="1104" alt="Постер фильма «Дюна: Часть вторая»" /><div class="cover-caption"><span>Кино</span><h3>Дюна: Часть вторая</h3></div></article>
+        <article class="game-note" data-category="games"><span class="note-label">Иногда — просто поиграть</span><h3>GTA V <span>/</span> CS</h3><p>Две игры из моего избранного.</p></article>
+      </div><p class="filter-status" id="filter-status" role="status">Показано всё избранное</p>
+    </section>
+
+    <section class="outro wrap section-space" aria-labelledby="outro-title"><p class="travel-note">Люблю поездки. Пока мало где был —<br />тем интереснее то, что впереди.</p><h2 id="outro-title">Будем<br /><em>на связи?</em></h2><div class="contact-links"><a href="https://t.me/tttimurr">Telegram <span>@tttimurr</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a href="https://github.com/KutuevTimur">GitHub <span>KutuevTimur</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></section>
+  </main>
+  <footer class="footer wrap"><p>Тимур / 2026</p><a href="../index.html#team">Все участники группы</a><a href="#main">Наверх ↑</a></footer>
+</body>
 </html>
