@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Имя Фамилия — Домашняя работа №1</title>
+    <title>Любовь Чибакова — Домашняя работа №1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="../styles.css" />
     <script src="../app.js" defer></script>
   </head>
-  <body>
+  <body class="lyuba-page">
     <header class="header">
       <div class="header__inner container">
         <a class="header__logo" href="../index.html">Домашняя работа №1</a>
@@ -20,56 +21,117 @@
     </header>
 
     <main class="main container">
-      <section class="profile">
-        <img class="profile__photo" src="../images/avatar.svg" alt="Фото: Имя Фамилия" />
+      <!-- Первый экран -->
+      <section class="lyuba-hero">
+        <img
+          class="lyuba-hero__photo"
+          src="../images/lyuba/hero.jpg"
+          alt="Фото: Любовь Чибакова"
+        />
+        <h1 class="lyuba-hero__name">Любовь<br />Чибакова</h1>
+      </section>
+
+      <!-- Обо мне -->
+      <section class="lyuba-about">
+        <h2 class="lyuba-title">Обо мне</h2>
         <div>
-          <h1 class="profile__name">Имя Фамилия</h1>
-          <p class="profile__text">
-            Пара предложений о себе: где учусь, чем занимаюсь, что делал(а) на этом сайте.
-          </p>
-          <button class="button" id="more-button" type="button">Подробнее</button>
-          <p class="more" id="more-text" hidden>
-            Больше о себе: откуда я, почему пошёл(пошла) в IT, чего хочу научиться.
+          <p class="lyuba-about__lead">Учусь в НИУ ВШЭ НН, люблю бег, музыку и фильмы, иногда пишу</p>
+          <button class="button button_outline" id="more-button" type="button">Подробнее</button>
+          <p class="lyuba-about__more" id="more-text" hidden>
+            Последние два года интересуюсь UX-исследованиями и UX-дизайном
           </p>
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section__title">Мои увлечения</h2>
-        <div class="tags">
-          <span class="tags__item">Кино</span>
-          <span class="tags__item">Музыка</span>
-          <span class="tags__item">Игры</span>
-          <span class="tags__item">Спорт</span>
-        </div>
+      <!-- Папки о себе -->
+      <section class="lyuba-favorites">
+        <h2 class="lyuba-label">Мои интересы</h2>
+        <details class="lyuba-folder">
+          <summary class="lyuba-folder__head">
+            <span class="lyuba-folder__num">01.</span>
+            <span class="lyuba-folder__name">Фильмы</span>
+          </summary>
+          <div class="lyuba-folder__cards">
+            <article class="lyuba-card">
+              <img class="lyuba-card__photo" src="../images/lyuba/kill-bill.jpg" alt="Постер фильма «Убить Билла»" />
+              <h3 class="lyuba-card__title">Убить Билла</h3>
+              <p class="lyuba-card__text">Грандиозная одиссея мести Квентина Тарантино, наполненная смесью культур и безупречной хореографией боевых сцен</p>
+            </article>
+            <article class="lyuba-card">
+              <img class="lyuba-card__photo" src="../images/lyuba/a-single-man.jpg" alt="Постер фильма «Одинокий мужчина»" />
+              <h3 class="lyuba-card__title">Одинокий мужчина</h3>
+              <p class="lyuba-card__text">Этот фильм Тома Форда люблю за глубокую, пронзительную историю о переживании утраты, потрясающую визуальную эстетику и невероятную передачу чувств</p>
+            </article>
+            <article class="lyuba-card">
+              <img class="lyuba-card__photo" src="../images/lyuba/eyes-wide-shut.jpg" alt="Постер фильма «С широко закрытыми глазами»" />
+              <h3 class="lyuba-card__title">С широко закрытыми глазами</h3>
+              <p class="lyuba-card__text">Картина Стэнли Кубрика глубоко обожаема мной за гипнотическую атмосферу ночного Нью-Йорка и честное, смелое исследование тайных желаний</p>
+            </article>
+          </div>
+        </details>
+
+        <details class="lyuba-folder">
+          <summary class="lyuba-folder__head">
+            <span class="lyuba-folder__num">02.</span>
+            <span class="lyuba-folder__name">Музыка</span>
+          </summary>
+          <div class="lyuba-folder__cards">
+            <article class="lyuba-card">
+              <img class="lyuba-card__photo" src="../images/lyuba/lana-del-rey.jpg" alt="Lana Del Rey" />
+              <h3 class="lyuba-card__title">Lana Del Rey</h3>
+              <p class="lyuba-card__text">Королева меланхолии и ностальгии</p>
+            </article>
+            <article class="lyuba-card">
+              <img class="lyuba-card__photo" src="../images/lyuba/kanye-west.jpg" alt="Kanye West" />
+              <h3 class="lyuba-card__title">Kanye West</h3>
+              <p class="lyuba-card__text">Непредсказуемость и эпатаж становятся чистым искусством</p>
+            </article>
+            <article class="lyuba-card">
+              <img class="lyuba-card__photo" src="../images/lyuba/noize-mc.jpg" alt="Noize MC" />
+              <h3 class="lyuba-card__title">Noize MC</h3>
+              <p class="lyuba-card__text">Конфликт юношеского бунта и ожидаемой социальной зрелости</p>
+            </article>
+            <article class="lyuba-card">
+              <img class="lyuba-card__photo" src="../images/lyuba/madonna.jpg" alt="Madonna" />
+              <h3 class="lyuba-card__title">Madonna</h3>
+              <p class="lyuba-card__text">Икона десятилетий</p>
+            </article>
+          </div>
+        </details>
+
+        <details class="lyuba-folder">
+          <summary class="lyuba-folder__head">
+            <span class="lyuba-folder__num">03.</span>
+            <span class="lyuba-folder__name">Увлечения</span>
+          </summary>
+          <div class="lyuba-folder__cards">
+            <article class="lyuba-card">
+              <img class="lyuba-card__photo" src="../images/lyuba/painting.jpg" alt="Руки в краске после занятия живописью" />
+              <h3 class="lyuba-card__title">Живопись</h3>
+              <p class="lyuba-card__text">С 5 лет ходила в художественную школу, 
+                ездила на пленеры и конкурсы, сейчас пишу довольно редко, но очень люблю этот поцесс</p>
+            </article>
+            <article class="lyuba-card">
+              <img class="lyuba-card__photo" src="../images/lyuba/running.jpg" alt="Бегуны на асфальте в движении" />
+              <h3 class="lyuba-card__title">Легкая атлетика</h3>
+              <p class="lyuba-card__text">С 12 лет начала бегать, занималась пять лет в спортивной школе, сейчас бегаю для души</p>
+            </article>
+          </div>
+        </details>
       </section>
 
-      <section class="section">
-        <h2 class="section__title">Любимое</h2>
-        <div class="favorites">
-          <article class="favorite">
-            <p class="favorite__label">Фильм</p>
-            <h3 class="favorite__title">Название фильма</h3>
-            <p class="favorite__text">Чем он нравится — пара предложений.</p>
-          </article>
-          <article class="favorite">
-            <p class="favorite__label">Музыка</p>
-            <h3 class="favorite__title">Исполнитель или альбом</h3>
-            <p class="favorite__text">Что слушаю чаще всего.</p>
-          </article>
-          <article class="favorite">
-            <p class="favorite__label">Игра</p>
-            <h3 class="favorite__title">Название игры</h3>
-            <p class="favorite__text">Сколько часов наиграно и почему.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section__title">Где меня найти</h2>
-        <div class="links">
-          <a class="links__item" href="https://github.com/">GitHub</a>
-          <a class="links__item" href="https://t.me/">Telegram</a>
+      <!-- Где меня найти -->
+      <section class="lyuba-contacts">
+        <h2 class="lyuba-title">Где меня<br />найти</h2>
+        <div class="lyuba-contacts__links">
+          <a class="lyuba-contacts__link" href="https://github.com/LuCh-Ans">
+            <span class="lyuba-contacts__label">GitHub</span>
+            github.com/LuCh-Ans
+          </a>
+          <a class="lyuba-contacts__link" href="https://t.me/lbvchb">
+            <span class="lyuba-contacts__label">Telegram</span>
+            @lbvchb
+          </a>
         </div>
       </section>
     </main>
