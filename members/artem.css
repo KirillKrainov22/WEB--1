@@ -1,0 +1,62 @@
+/* Оформление только страницы Артема. */
+:root { --bg:#f7f6f2; --surface:#fff; --text:#202521; --muted:#646b65; --border:#dedfd7; --accent:#b34722; --button:#244c3b; }
+body.dark-theme { --bg:#111213; --surface:#1b1d1f; --text:#f4f2ee; --muted:#b5b6b8; --border:#303235; --accent:#f4a16b; --button:#9a4525; color-scheme:dark; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:Arial,sans-serif; line-height:1.65; }
+a { color:inherit; text-decoration:none; }
+a:hover { text-decoration:underline; }
+button { font:inherit; cursor:pointer; }
+.wrap { width:min(1080px,calc(100% - 48px)); margin:auto; }
+.header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:24px 0; border-bottom:1px solid var(--border); }
+.number,.eyebrow { font-size:12px; font-weight:bold; letter-spacing:2px; text-transform:uppercase; }
+.number { color:var(--muted); }
+.hero { display:grid; grid-template-columns:1.15fr 1fr; align-items:center; gap:64px; padding:56px 0; }
+.eyebrow,.dot { color:var(--accent); }
+h1 { font-size:clamp(44px,6vw,76px); line-height:1.05; letter-spacing:-3px; margin:24px 0; }
+h2 { font-size:30px; line-height:1.2; margin:8px 0 24px; letter-spacing:-1px; }
+h3 { font-size:21px; margin:8px 0; }
+p { color:var(--muted); }
+.lead { font-size:21px; color:var(--text); line-height:1.5; }
+.button { display:inline-flex; align-items:center; justify-content:center; background:var(--button); color:#fff; padding:11px 18px; border:1px solid transparent; border-radius:9px; font-weight:bold; font-size:14px; transition:transform .2s,background .2s; }
+.button:hover { transform:translateY(-2px); text-decoration:none; }
+.secondary { background:transparent; border-color:var(--border); color:var(--text); }
+:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+.tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+.tags span { border:1px solid var(--border); border-radius:24px; padding:5px 12px; font-size:13px; }
+.portrait { margin:0; position:relative; }
+.portrait img { width:100%; height:510px; object-fit:cover; object-position:center 57%; display:block; border-radius:18px; }
+
+.section { padding:40px 0; border-top:1px solid var(--border); }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.card { padding:26px; background:var(--surface); border:1px solid var(--border); border-radius:14px; transition:transform .2s; }
+.card:hover { transform:translateY(-4px); }
+.card-icon { font-size:26px; color:var(--accent); }
+ul { padding-left:19px; color:var(--muted); }
+li { margin:7px 0; }
+.result { margin-bottom:0; font-size:13px; }
+.contact { display:flex; justify-content:space-between; align-items:center; gap:24px; }
+.contact h2 { margin-bottom:0; }
+.contact-links { display:flex; flex-wrap:wrap; gap:10px; }
+.footer { display:flex; justify-content:space-between; gap:20px; padding:24px 0; border-top:1px solid var(--border); font-size:13px; color:var(--muted); }
+@keyframes bounce { 50% { transform:translateY(-8px); } }
+.shot { animation:bounce .3s ease; }
+@media(max-width:760px) { .wrap { width:calc(100% - 32px); } .header { flex-wrap:wrap; } .number { display:none; } .hero { grid-template-columns:1fr; gap:28px; padding:36px 0; } .portrait img { height:440px; } .cards { grid-template-columns:1fr; } .contact { align-items:flex-start; flex-direction:column; } .footer { flex-wrap:wrap; } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none !important; transition:none !important; } }
+
+/* Обложки и постеры сохраняют свои пропорции. */
+.portrait img { filter:saturate(1.23) contrast(1.08); height:570px; object-position:center 60%; }
+.interest-block { margin:32px 0 44px; }
+.interest-block > h3 { margin-bottom:18px; }
+.gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.media { margin:0; min-width:0; }
+.media img { display:block; width:100%; border-radius:12px; border:1px solid var(--border); transition:transform .2s; }
+.media:hover img { transform:translateY(-4px); }
+.albums img { aspect-ratio:1; object-fit:cover; }
+.posters img { aspect-ratio:2 / 3; object-fit:contain; background:#0b0b0b; }
+.media figcaption { margin-top:12px; font-weight:bold; font-size:16px; }
+.basket-card { display:grid; grid-template-columns:1fr 1fr; background:var(--surface); border:1px solid var(--border); border-radius:16px; overflow:hidden; margin:16px 0; }
+.basket-photo { display:block; width:100%; height:440px; object-fit:cover; object-position:center 28%; }
+.basket-copy { padding:40px; align-self:center; }
+.basket-copy h3 { font-size:30px; line-height:1.2; }
+@media(max-width:760px) { .portrait img { height:500px; } .gallery { gap:12px; } .media figcaption { font-size:13px; } .basket-card { grid-template-columns:1fr; } .basket-photo { height:360px; } .basket-copy { padding:24px; } }
+@media(max-width:420px) { .gallery { grid-template-columns:1fr; gap:24px; } .media { width:min(100%,300px); margin:auto; } .media figcaption { font-size:16px; } }

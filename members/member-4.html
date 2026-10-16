@@ -1,84 +1,40 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Имя Фамилия — Домашняя работа №1</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <script src="../app.js" defer></script>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__inner container">
-        <a class="header__logo" href="../index.html">Домашняя работа №1</a>
-        <nav class="header__nav">
-          <a class="header__link" href="../index.html">← На главную</a>
-          <a class="header__link" href="../index.html#team">Все участники</a>
-        </nav>
-        <button class="button button_outline header__theme" id="theme-button" type="button">Тёмная тема</button>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Артем Соловьев — участник №4</title>
+  <link rel="stylesheet" href="artem.css">
+  <script src="artem.js" defer></script>
+</head>
+<body class="dark-theme">
+  <header class="header wrap">
+    <a href="../index.html">← На главную</a>
+    <span class="number">УЧАСТНИК / 04</span>
+    <button id="theme-button" class="button secondary" type="button">Светлая тема</button>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div class="intro">
+        <p class="eyebrow">Спорт. Музыка. Путешествия.</p>
+        <h1>Артем<br>Соловьев<span class="dot">.</span></h1>
+        <p class="lead">Люблю движение — на баскетбольной площадке и за её пределами.</p>
+        <p>Занимаюсь спортом с трёх лет: в детстве это была борьба, позже — тайский бокс. Но главным спортом для меня остаётся баскетбол ❤️ Люблю путешествовать, открывать новые места и вести активный образ жизни.</p>
+        <div class="tags"><span>🏀 Баскетбол</span><span>Путешествия</span><span>Активный отдых</span></div>
       </div>
-    </header>
-
-    <main class="main container">
-      <section class="profile">
-        <img class="profile__photo" src="../images/avatar.svg" alt="Фото: Имя Фамилия" />
-        <div>
-          <h1 class="profile__name">Имя Фамилия</h1>
-          <p class="profile__text">
-            Пара предложений о себе: где учусь, чем занимаюсь, что делал(а) на этом сайте.
-          </p>
-          <button class="button" id="more-button" type="button">Подробнее</button>
-          <p class="more" id="more-text" hidden>
-            Больше о себе: откуда я, почему пошёл(пошла) в IT, чего хочу научиться.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section__title">Мои увлечения</h2>
-        <div class="tags">
-          <span class="tags__item">Кино</span>
-          <span class="tags__item">Музыка</span>
-          <span class="tags__item">Игры</span>
-          <span class="tags__item">Спорт</span>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section__title">Любимое</h2>
-        <div class="favorites">
-          <article class="favorite">
-            <p class="favorite__label">Фильм</p>
-            <h3 class="favorite__title">Название фильма</h3>
-            <p class="favorite__text">Чем он нравится — пара предложений.</p>
-          </article>
-          <article class="favorite">
-            <p class="favorite__label">Музыка</p>
-            <h3 class="favorite__title">Исполнитель или альбом</h3>
-            <p class="favorite__text">Что слушаю чаще всего.</p>
-          </article>
-          <article class="favorite">
-            <p class="favorite__label">Игра</p>
-            <h3 class="favorite__title">Название игры</h3>
-            <p class="favorite__text">Сколько часов наиграно и почему.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section__title">Где меня найти</h2>
-        <div class="links">
-          <a class="links__item" href="https://github.com/">GitHub</a>
-          <a class="links__item" href="https://t.me/">Telegram</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer__inner container">
-        <p class="footer__text">© 2026 Домашняя работа №1</p>
-        <a href="../index.html">На главную</a>
-      </div>
-    </footer>
-  </body>
+      <figure class="portrait"><img src="../images/artem/photo.jpg" alt="Артем на сапборде во время путешествия" width="1152" height="2048"></figure>
+    </section>
+    <section class="section" aria-labelledby="favorites-title">
+      <p class="eyebrow">То, что нравится</p><h2 id="favorites-title">В свободное время</h2>
+      <div class="interest-block"><h3>В наушниках</h3><div class="gallery albums"><figure class="media"><img src="../images/artem/pharaoh.jpg" alt="Обложка альбома PHARAOH" loading="lazy"><figcaption>PHARAOH</figcaption></figure><figure class="media"><img src="../images/artem/scriptonite.jpg" alt="Обложка альбома Скриптонита" loading="lazy"><figcaption>Скриптонит</figcaption></figure><figure class="media"><img src="../images/artem/guf.jpg" alt="Обложка альбома GUF «Дома»" loading="lazy"><figcaption>GUF</figcaption></figure></div></div>
+      <div class="interest-block"><h3>На экране</h3><div class="gallery posters"><figure class="media"><img src="../images/artem/fight-club.jpg" alt="Постер фильма «Бойцовский клуб»" loading="lazy"><figcaption>Бойцовский клуб</figcaption></figure><figure class="media"><img src="../images/artem/fast-furious.jpg" alt="Постер фильма «Форсаж»" loading="lazy"><figcaption>Форсаж</figcaption></figure><figure class="media"><img src="../images/artem/casino-royale.jpg" alt="Постер фильма «Казино Рояль»" loading="lazy"><figcaption>Казино Рояль</figcaption></figure></div></div>
+      <article class="basket-card">
+        <img class="basket-photo" src="../images/artem/basketball.jpg" alt="Баскетболист с мячом" loading="lazy">
+        <div class="basket-copy"><p class="eyebrow">На площадке</p><h3>Баскетбол — моя игра</h3><p>Мой основной спорт и любимый способ провести время.</p><button id="basket-button" class="button" type="button">Бросить мяч 🏀</button><p id="basket-result" class="result" aria-live="polite">Попадания: 0</p></div>
+      </article>
+    </section>
+    <section class="contact section"><div><p class="eyebrow">Остаёмся на связи</p><h2>Где меня найти</h2></div><div class="contact-links"><a class="button" href="https://t.me/Solovievrtem">Telegram ↗</a><a class="button secondary" href="https://github.com/Antei22">GitHub ↗</a></div></section>
+  </main>
+  <footer class="footer wrap"><span>© 2026 Артем Соловьев</span><a href="../index.html#team">Все участники →</a></footer>
+</body>
 </html>
