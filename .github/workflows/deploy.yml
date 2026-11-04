@@ -1,0 +1,70 @@
+name: Build and publish team website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  website:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Install Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: '22'
+
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+
+      - name: Prepare homepage and shared files
+        shell: bash
+        run: |
+          mkdir -p _site/members
+          cp index.html styles.css app.js animation.json _site/
+          cp -R images _site/images
+
+      - name: Prepare participant pages
+        shell: bash
+        run: |
+          for member in kirill lyuba timur artem; do
+            member_dir="members/$member"
+            mkdir -p "_site/$member_dir"
+            if [ -f "$member_dir/package.json" ]; then
+              echo "Building Vite project: $member_dir"
+              npm --prefix "$member_dir" ci
+              npm --prefix "$member_dir" run build -- --base=./
+              test -f "$member_dir/dist/index.html"
+              cp -R "$member_dir/dist/." "_site/$member_dir/"
+            else
+              echo "Publishing existing page: $member_dir"
+              rsync -a --exclude='node_modules/' --exclude='dist/' --exclude='.git/' \
+                "$member_dir/" "_site/$member_dir/"
+            fi
+            test -f "_site/$member_dir/index.html"
+          done
+
+      - name: Upload assembled website
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
+        with:
+          path: _site
+
+      - name: Publish website
+        id: publish
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
