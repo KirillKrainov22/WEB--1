@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Любовь Чибакова — Домашняя работа №1</title>
+    <title>Любовь Чибакова | Домашние работы №1 и №2</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="../../styles.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="../../app.js" defer></script>
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./common.js"></script>
   </head>
   <body class="lyuba-page">
     <header class="header">
       <div class="header__inner container">
-        <a class="header__logo" href="../../index.html">Домашняя работа №1</a>
+        <a class="header__logo" href="../../index.html">Домашние работы №1 и №2</a>
         <nav class="header__nav">
           <a class="header__link" href="../../index.html">← На главную</a>
           <a class="header__link" href="../../index.html#team">Все участники</a>
@@ -22,11 +22,10 @@
     </header>
 
     <main class="main container">
-      <!-- Первый экран -->
       <section class="lyuba-hero">
         <img
           class="lyuba-hero__photo"
-          src="../../images/lyuba/hero.jpg"
+          src="./images/hero.jpg"
           alt="Фото: Любовь Чибакова"
         />
         <h1 class="lyuba-hero__name">Любовь<br />Чибакова</h1>
@@ -54,17 +53,17 @@
           </summary>
           <div class="lyuba-folder__cards">
             <article class="lyuba-card">
-              <img class="lyuba-card__photo" src="../../images/lyuba/kill-bill.jpg" alt="Постер фильма «Убить Билла»" />
+              <img class="lyuba-card__photo" src="./images/kill-bill.jpg" alt="Постер фильма «Убить Билла»" />
               <h3 class="lyuba-card__title">Убить Билла</h3>
               <p class="lyuba-card__text">Грандиозная одиссея мести Квентина Тарантино, наполненная смесью культур и безупречной хореографией боевых сцен</p>
             </article>
             <article class="lyuba-card">
-              <img class="lyuba-card__photo" src="../../images/lyuba/a-single-man.jpg" alt="Постер фильма «Одинокий мужчина»" />
+              <img class="lyuba-card__photo" src="./images/a-single-man.jpg" alt="Постер фильма «Одинокий мужчина»" />
               <h3 class="lyuba-card__title">Одинокий мужчина</h3>
               <p class="lyuba-card__text">Этот фильм Тома Форда люблю за глубокую, пронзительную историю о переживании утраты, потрясающую визуальную эстетику и невероятную передачу чувств</p>
             </article>
             <article class="lyuba-card">
-              <img class="lyuba-card__photo" src="../../images/lyuba/eyes-wide-shut.jpg" alt="Постер фильма «С широко закрытыми глазами»" />
+              <img class="lyuba-card__photo" src="./images/eyes-wide-shut.jpg" alt="Постер фильма «С широко закрытыми глазами»" />
               <h3 class="lyuba-card__title">С широко закрытыми глазами</h3>
               <p class="lyuba-card__text">Картина Стэнли Кубрика глубоко обожаема мной за гипнотическую атмосферу ночного Нью-Йорка и честное, смелое исследование тайных желаний</p>
             </article>
@@ -78,22 +77,22 @@
           </summary>
           <div class="lyuba-folder__cards">
             <article class="lyuba-card">
-              <img class="lyuba-card__photo" src="../../images/lyuba/lana-del-rey.jpg" alt="Lana Del Rey" />
+              <img class="lyuba-card__photo" src="./images/lana-del-rey.jpg" alt="Lana Del Rey" />
               <h3 class="lyuba-card__title">Lana Del Rey</h3>
               <p class="lyuba-card__text">Королева меланхолии и ностальгии</p>
             </article>
             <article class="lyuba-card">
-              <img class="lyuba-card__photo" src="../../images/lyuba/kanye-west.jpg" alt="Kanye West" />
+              <img class="lyuba-card__photo" src="./images/kanye-west.jpg" alt="Kanye West" />
               <h3 class="lyuba-card__title">Kanye West</h3>
               <p class="lyuba-card__text">Непредсказуемость и эпатаж становятся чистым искусством</p>
             </article>
             <article class="lyuba-card">
-              <img class="lyuba-card__photo" src="../../images/lyuba/noize-mc.jpg" alt="Noize MC" />
+              <img class="lyuba-card__photo" src="./images/noize-mc.jpg" alt="Noize MC" />
               <h3 class="lyuba-card__title">Noize MC</h3>
               <p class="lyuba-card__text">Конфликт юношеского бунта и ожидаемой социальной зрелости</p>
             </article>
             <article class="lyuba-card">
-              <img class="lyuba-card__photo" src="../../images/lyuba/madonna.jpg" alt="Madonna" />
+              <img class="lyuba-card__photo" src="./images/madonna.jpg" alt="Madonna" />
               <h3 class="lyuba-card__title">Madonna</h3>
               <p class="lyuba-card__text">Икона десятилетий</p>
             </article>
@@ -107,18 +106,34 @@
           </summary>
           <div class="lyuba-folder__cards">
             <article class="lyuba-card">
-              <img class="lyuba-card__photo" src="../../images/lyuba/painting.jpg" alt="Руки в краске после занятия живописью" />
+              <img class="lyuba-card__photo" src="./images/painting.jpg" alt="Руки в краске после занятия живописью" />
               <h3 class="lyuba-card__title">Живопись</h3>
               <p class="lyuba-card__text">С 5 лет ходила в художественную школу, 
                 ездила на пленеры и конкурсы, сейчас пишу довольно редко, но очень люблю этот поцесс</p>
             </article>
             <article class="lyuba-card">
-              <img class="lyuba-card__photo" src="../../images/lyuba/running.jpg" alt="Бегуны на асфальте в движении" />
+              <img class="lyuba-card__photo" src="./images/running.jpg" alt="Бегуны на асфальте в движении" />
               <h3 class="lyuba-card__title">Легкая атлетика</h3>
               <p class="lyuba-card__text">С 12 лет начала бегать, занималась пять лет в спортивной школе, сейчас бегаю для души</p>
             </article>
           </div>
         </details>
+      </section>
+
+      <section class="lyuba-projects" aria-labelledby="projects-title">
+        <div class="lyuba-projects__head">
+          <h2 class="lyuba-title" id="projects-title">Мои проекты</h2>
+          <button class="button button_outline" id="projects-refresh" type="button">Обновить</button>
+        </div>
+        <p id="projects-status" role="status"></p>
+        <div class="lyuba-projects__list" id="projects-list"></div>
+        <template id="project-card">
+          <article class="lyuba-project">
+            <h3><a class="lyuba-project__link"></a></h3>
+            <p class="lyuba-project__description"></p>
+            <p class="lyuba-project__language"></p>
+          </article>
+        </template>
       </section>
 
       <!-- Где меня найти -->
@@ -139,9 +154,10 @@
 
     <footer class="footer">
       <div class="footer__inner container">
-        <p class="footer__text">© 2026 Домашняя работа №1</p>
+        <p class="footer__text"> 2026 | Домашние работы №1 и №2</p>
         <a href="../../index.html">На главную</a>
       </div>
     </footer>
+    <script type="module" src="./projects.js"></script>
   </body>
 </html>

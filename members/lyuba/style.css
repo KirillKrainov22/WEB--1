@@ -309,3 +309,43 @@
     padding: 24px;
   }
 }
+
+.lyuba-projects {
+  margin-top: clamp(64px, 10vw, 120px);
+}
+
+.lyuba-projects__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.lyuba-projects__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 16px;
+}
+
+.lyuba-project {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow-wrap: anywhere;
+}
+
+.lyuba-project h3 {
+  margin: 0;
+}
+
+.lyuba-project__link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.lyuba-project__language {
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
