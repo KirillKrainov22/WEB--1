@@ -37,7 +37,9 @@ jobs:
         shell: bash
         run: |
           mkdir -p _site/members
-          cp index.html styles.css app.js animation.json _site/
+          npm ci
+          npm run build
+          cp -R dist/. _site/
           cp -R images _site/images
 
       - name: Prepare participant pages
