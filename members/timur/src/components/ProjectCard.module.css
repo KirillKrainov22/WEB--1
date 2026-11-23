@@ -1,0 +1,25 @@
+.project-card {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid var(--muted);
+  border-top: 4px solid var(--purple);
+  overflow-wrap: anywhere;
+}
+
+.project-card h3 {
+  font:
+    700 26px/1.2 Oswald,
+    Arial,
+    sans-serif;
+}
+
+.project-language {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+:global(body.night-mode) .project-card {
+  border-top-color: var(--lavender);
+}

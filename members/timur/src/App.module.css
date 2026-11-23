@@ -1,0 +1,214 @@
+.wrap {
+  width: min(var(--page), calc(100% - 64px));
+  margin-inline: auto;
+}
+.section-space {
+  margin-top: var(--gap);
+}
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  background: var(--yellow);
+  color: #211d30;
+  padding: 12px;
+  z-index: 20;
+}
+.skip-link:focus {
+  top: 12px;
+}
+.small-button {
+  padding: 10px 16px;
+  border: 1px solid currentColor;
+  border-radius: 25px;
+  background: transparent;
+  color: var(--ink);
+  min-width: 146px;
+}
+.small-button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+.cutline {
+  font:
+    italic 56px/1.1 Georgia,
+    "Times New Roman",
+    serif;
+  margin: 15px 0 30px;
+  transform: rotate(-3deg);
+  width: max-content;
+}
+.cutline span {
+  display: inline-block;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 1px 13px 9px;
+}
+.cutline span + span {
+  background: var(--yellow);
+  color: #211d30;
+  margin-left: 5px;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 42px;
+}
+.section-heading > p {
+  color: var(--muted);
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+.note-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 18px;
+}
+.sport-switch {
+  margin-top: 25px;
+}
+.sport-switch p {
+  min-height: 80px;
+}
+.sport-switch .paper-button {
+  margin-top: 8px;
+}
+.list-note {
+  padding: 30px 8px;
+}
+.list-note h3 {
+  font:
+    700 29px/1.4 Oswald,
+    sans-serif;
+  margin-bottom: 20px;
+}
+.list-note p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.film-note {
+  padding: 28px;
+  background: var(--yellow);
+  color: #211d30;
+  transform: rotate(1deg);
+}
+.film-note h3 {
+  font:
+    700 38px/1.1 Oswald,
+    sans-serif;
+}
+.film-note h3 em {
+  font:
+    italic 42px Georgia,
+    serif;
+}
+.film-line {
+  display: block;
+  width: 70%;
+  height: 1px;
+  background: #211d30;
+  margin-top: 32px;
+}
+@media (max-width: 1000px) {
+  .cutline {
+    font-size: 44px;
+  }
+}
+@media (max-width: 700px) {
+  .wrap {
+    width: calc(100% - 36px);
+  }
+}
+@media (max-width: 700px) {
+  .small-button {
+    min-width: 135px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 700px) {
+  .cutline {
+    font-size: clamp(26px, 8vw, 39px);
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .section-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .section-heading > p {
+    margin-top: 22px;
+  }
+}
+@media (max-width: 700px) {
+  .sport-switch p {
+    min-height: 100px;
+  }
+}
+@media (max-width: 700px) {
+  .list-note {
+    padding: 22px 0;
+  }
+}
+@media (max-width: 700px) {
+  .list-note h3 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 700px) {
+  .list-note p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 700px) {
+  .film-note {
+    padding: 20px;
+    grid-column: 1;
+  }
+}
+@media (max-width: 700px) {
+  .film-note h3 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .film-note h3 em {
+    font-size: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .film-note .note-label {
+    font-size: 9px;
+  }
+}
+@media (max-width: 370px) {
+  .cutline {
+    font-size: 26px;
+  }
+}
+@media (max-width: 370px) {
+  .cutline span {
+    padding-inline: 9px;
+  }
+}
+@media (forced-colors: active) {
+  .film-note {
+    border: 1px solid CanvasText;
+  }
+}
+.note-label {
+  font-size: 12px;
+}
+@media (max-width: 700px) {
+  .film-note .note-label {
+    font-size: 12px;
+  }
+}

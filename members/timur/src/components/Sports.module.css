@@ -1,0 +1,127 @@
+.sports button:focus-visible {
+  outline-color: var(--yellow);
+}
+.sports::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.11;
+  background-image: url("../assets/paper-texture.png");
+  background-size: 600px;
+  mix-blend-mode: screen;
+  z-index: -1;
+}
+.sports {
+  background: var(--purple-deep);
+  color: #fffdf4;
+  padding: 70px 0;
+  position: relative;
+  isolation: isolate;
+}
+.sports-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 70px;
+}
+.sports h2 span {
+  color: var(--yellow);
+}
+.sports-lead {
+  margin-top: 24px;
+  font-size: 17px;
+}
+.sport-years {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid #ffffff55;
+  margin-bottom: 26px;
+}
+.sport-years strong {
+  display: block;
+  font:
+    700 35px Oswald,
+    sans-serif;
+  color: var(--yellow);
+}
+.sport-years span {
+  font-size: 11px;
+  display: block;
+}
+@media (max-width: 1000px) {
+  .sports-inner {
+    gap: 35px;
+  }
+}
+@media (max-width: 700px) {
+  .sports-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .sports {
+    padding: 45px 0;
+  }
+}
+@media (max-width: 700px) {
+  .sport-years strong {
+    font-size: 29px;
+  }
+}
+@media (max-width: 700px) {
+  .sport-years span {
+    font-size: 10px;
+  }
+}
+@media (max-width: 370px) {
+  .sport-years {
+    gap: 12px;
+  }
+}
+@media (forced-colors: active) {
+  .sports {
+    border: 1px solid CanvasText;
+  }
+}
+@media (forced-colors: active) {
+  .sports::before {
+    display: none;
+  }
+}
+.sport-years span {
+  font-size: 12px;
+}
+@media (max-width: 700px) {
+  .sport-years span {
+    font-size: 12px;
+  }
+}
+.sport-interests {
+  margin-top: 25px;
+}
+.sport-years strong {
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .sport-years strong {
+    font-size: 27px;
+  }
+}
+@media (max-width: 370px) {
+  .sport-years {
+    gap: 10px;
+  }
+}
+@media (max-width: 370px) {
+  .sport-years strong {
+    font-size: 24px;
+  }
+}
+@media (max-width: 370px) {
+  .sport-years span {
+    font-size: 11px;
+  }
+}

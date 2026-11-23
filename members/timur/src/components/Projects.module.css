@@ -1,0 +1,25 @@
+.projects-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--muted);
+}
+
+.projects-status {
+  min-height: 1.65em;
+  margin-block: 12px;
+  color: var(--muted);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
+}
+
+:global(body.night-mode) .projects :focus-visible {
+  outline-color: var(--yellow);
+}
