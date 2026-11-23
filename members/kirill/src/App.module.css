@@ -1,3 +1,124 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header__link,
+.button,
+.footer__inner {
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+  display: grid;
+  grid-template-areas: "nav logo theme";
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px 24px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.header__logo {
+  grid-area: logo;
+  font-size: var(--font-size-large);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: nav;
+  gap: 8px 24px;
+}
+
+.header__link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.header__link:hover {
+  color: var(--color-text);
+}
+
+.header__theme {
+  grid-area: theme;
+  justify-self: end;
+  padding: 10px 16px;
+}
+
+.button {
+  padding: 15px 28px;
+  font-family: inherit;
+  border: 1px solid var(--color-text);
+  background: var(--color-text);
+  color: var(--color-bg);
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button_outline {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.main {
+  padding-top: 32px;
+  padding-bottom: 80px;
+}
+
+.section {
+  margin-top: 80px;
+}
+
+.section__title {
+  margin: 0 0 28px;
+  font-size: var(--font-size-title);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.footer {
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  color: var(--color-text-muted);
+}
+
+.footer__text {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .header__inner {
+    grid-template-areas: "logo" "nav" "theme";
+    grid-template-columns: 1fr;
+  }
+  .header__theme { justify-self: start; }
+}
 .links__item,
 .tags__item,
 .favorite__label {
@@ -188,7 +309,7 @@
   color: var(--color-text-muted);
 }
 
-#projects-retry {
+.retry {
   margin-top: 16px;
 }
 
